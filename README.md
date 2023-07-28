@@ -3,7 +3,7 @@
 
 Clone the repository using the following command:
 
-git clone 
+git clone https://github.com/MohammedSaffath/FizzBizz.git
 
 Navigate to the backend directory:
 
