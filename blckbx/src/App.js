@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import FizzBuzz from './fizz.js';
 import './App.css'; 
+import 'materialize-css/dist/css/materialize.min.css';
+
 
 const App = () => {
   // Using states for authentication 
@@ -26,10 +28,14 @@ const App = () => {
       {authenticated ? (
         <FizzBuzz />
       ) : (
-        <div className="login-form">
+        <div className="card  blue darken-4">
+          <div className="card-content white-text">
+          <span className="card-title">Login</span>
           <input
             type="text"
+            className="white-text"
             placeholder="Username"
+          
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
@@ -37,9 +43,11 @@ const App = () => {
             type="password"
             placeholder="Password"
             value={password}
+            className="white-text"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleLogin}>Login</button>
+          <button  className="waves-effect waves-light btn" onClick={handleLogin}>Login</button>
+          </div>
         </div>
       )}
     </div>
