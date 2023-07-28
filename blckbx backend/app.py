@@ -1,29 +1,29 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
-#FizzBuzz Code
-def fizzbuzz(number):
-    #multiple of 3 and 5
-    if number % 3 == 0 and number % 5 == 0:
-        return "FizzBuzz"
-    
-    #multiple of 3 
-    elif number % 3 == 0:
-        return "Fizz"
-    #multiple of 5
+CORS(app)  # Allow CORS for all routes
 
-    elif number % 5 == 0:
-        return "Buzz"
-    else:
-        return str(number)
 
-#creating api using flask
+# API 
 @app.route('/api/fizzbuzz', methods=['GET'])
-def get_fizzbuzz():
-    result = [fizzbuzz(number) for number in range(1, 101)]
-
-    #Converting Result into Json
+def fizzbuzz():
+    # fizzbuzz function 
+    result = []
+    for num in range(1, 101):
+        # Multiple of 3 and 5
+        if num % 3 == 0 and num % 5 == 0:
+            result.append('FizzBuzz')
+        # Multiple of 3
+        elif num % 3 == 0:
+            result.append('Fizz')
+        # Multiple of 5
+        elif num % 5 == 0:
+            result.append('Buzz')
+        else:
+            result.append(num)
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Running Backend in local host
+    app.run(host='localhost', port=5000, debug=True)
