@@ -4,6 +4,7 @@ import './App.css';
 const FizzBuzz = () => {
   const [numbers, setNumbers] = useState([]);
 
+  // API call and recording the response
   useEffect(() => {
     fetch('http://127.0.0.1:5000/api/fizzbuzz')
       .then((response) => response.json())
