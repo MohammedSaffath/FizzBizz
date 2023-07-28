@@ -1,4 +1,4 @@
-### FizzBizz by Mohammed Saffath
+# FizzBizz by Mohammed Saffath
 
 
 Clone the repository using the following command:
@@ -9,13 +9,13 @@ Navigate to the backend directory:
 
 `$ cd blckbx backend`
 
-# Run the backend server:
+### Run the backend server:
 
 `$ python app.py`
 The backend API should now be running on http://localhost:5000 You can access the API endpoint
 
 
-# Frontend (ReactJS)
+### Frontend (ReactJS)
 Navigate to the frontend directory: 
 (Make sure to go back to the root directory using cd ..)
 
@@ -26,13 +26,13 @@ Start the frontend development server:
 `$ npm install`
 `$ npm start`
 
-# Security 
+### Security 
 In the above project, I have hard-coded the user credentials which is less than ideal and optimal. A proper authentication mechanism would require a database implementation and implementing OAuth requires integrating with OAuth provider APIs eg Google (which is outside the scope of this project, I presume)
 
 Addressing security risks through input validation, XSS prevention in React, CSRF token implementation, secure configuration, and avoidance of deserialization from untrusted sources. While sensitive data exposure is mitigated through encryption, missing function-level access control is managed with role-based access control. Safe practices and secure API endpoints protect against XSSI. Regular updates guard against vulnerabilities and logging and monitoring enhance incident detection and response
 
 
-# Additional security measures for a larger project includes:
+### Additional security measures for a larger project includes:
 
 1. Adding two-factor authentication (2FA) will increase the security of user authentication.
 
